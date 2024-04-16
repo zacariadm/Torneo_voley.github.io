@@ -97,7 +97,9 @@ function cambiarFechas(partidaId, nuevaFecha) {
 cambiarFechas(0, '17 de abril');
 cambiarFechas(54, '18 de abril');
 cambiarFechas(28, '19 de abril');
-// cambiarFechas(0, '09 de abril');
+cambiarFechas(20, '22 de abril');
+//cambiarFechas(55, 'por definir'); // no hay equipo 55, esta función sirve para quitar fecha a partidas
+
 
 
 
