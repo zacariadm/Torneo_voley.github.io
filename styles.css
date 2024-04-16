@@ -1,0 +1,266 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ancho del 100% */
+    background: linear-gradient(90deg, #0000ff, #000000, #0000ff, #000000, #0000ff, #000000);
+    background-size: 600% 600%; /* Tamaño del degradado */
+    animation: gradientAnimation 10s ease infinite; /* Animación del degradado */
+}
+
+head {
+    width: 100%; /* Ancho del 100% */
+    
+}
+
+
+.header {
+    background: linear-gradient(45deg, rgba(240, 240, 240, 0.8), rgba(255, 255, 255, 0.8)); /* Degradado de colores claros con transparencia */
+    color: #333; /* Color de texto oscuro */
+    text-align: center;
+    padding: 10px 0; /* Tamaño del padding */
+    border-radius: 15px; /* Bordes redondeados en todos los lados */
+    width: 50%; /* Ocupar el 25% del ancho de la pantalla */
+    margin: 0 auto; /* Centrar horizontalmente */
+    margin-top: 10px;
+}
+
+.instagram-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #ff00cc;
+    text-decoration: none;
+}
+
+.instagram-link:hover {
+    text-decoration: underline;
+}
+
+.tabla-section1, .tabla-section3 {
+    margin: 20px; /* Margen exterior */
+    display: flex;
+    justify-content: space-between; /* Para distribuir los elementos a los lados */
+    align-items: center; /* Para alinear verticalmente los elementos */
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con opacidad */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el contenedor de la tabla */
+.table-container {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%; /* La tabla ocupará el resto del espacio disponible */
+}
+
+/* Estilos para la tabla */
+.table-container table {
+    margin: 0%;
+    width: 100%; /* Para asegurarse de que la tabla ocupe todo el espacio disponible */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para el contenedor de la imagen */
+.img-container {
+    margin-bottom: 10px;
+    flex: 1; /* La imagen ocupará el resto del espacio disponible */
+}
+
+/* Estilos para la imagen dentro del contenedor */
+.img-container img {
+    width: 100%; /* Para asegurarse de que la imagen ocupe todo el espacio disponible */
+}
+
+
+.tabla-section2{
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con opacidad */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el contenedor de la imagen */
+.img-container {
+    width: 25%; /* La imagen ocupará el 25% del espacio disponible */
+    margin-right: 20px; /* Margen a la derecha para separarla de la tabla */
+}
+
+/* Estilos para la imagen */
+.img-container img {
+    width: 100%; /* Para asegurarse de que la imagen ocupe todo el espacio disponible */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para la tabla */
+.table-container {
+    width: 100%;
+    height: 100%; /* La tabla ocupará el resto del espacio disponible */
+    margin: 10px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    border: 0.5px solid #ccc; /* Borde */
+   
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para el modal */
+.modal-title {
+    color: #007bff;
+}
+
+/* Estilos para el carousel */
+.carousel-item img {
+    max-width: 100%; /* Establecer el ancho máximo */
+    max-height: 300px; /* Establecer la altura máxima */
+    object-fit: cover; /* Ajustar el tamaño de la imagen sin distorsionarla */
+}
+/* Estilos para el carousel */
+#carouselExampleInterval {
+    margin: 20px auto; /* Centrar el carousel horizontalmente */
+    max-width: 800px; /* Establecer un ancho máximo */
+}
+
+.carousel-inner img {
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    object-fit: cover; /* Ajustar el tamaño de la imagen sin distorsionarla */
+    max-height: 400px; /* Altura máxima de las imágenes */
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Ancho del 100% */
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* Estilos para el botón */
+.btn-primary {
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .tabla-section1 {
+        padding: 0 20px;
+        justify-content: center; /* Centrar horizontalmente */
+        flex-direction: column; /* Apilar elementos en dispositivos móviles */
+    }
+    .tabla-section3 {
+        padding: 0 10px;
+        justify-content: center; /* Centrar horizontalmente */
+        flex-direction: column; /* Apilar elementos en dispositivos móviles */
+        align-items: center; /* Centrar elementos en dispositivos móviles */
+    }
+    
+    .table-container{
+        overflow-x: auto;
+        margin:10px;
+    }
+
+    /* Estilos adicionales para la imagen en dispositivos móviles */
+    .img-container {
+        flex-direction: column;
+        padding: 0 20px;
+        width: 90%; /* Reducir el ancho de la imagen en dispositivos móviles */
+    }
+}
+
+.video-container {
+    width: 75%; /* Ancho del contenedor */
+    max-width: 400px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+  }
+  
+  .video-container video {
+    width: 100%; /* Ancho del video */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Mostrar como bloque */
+  }
+  
+  @media screen and (max-width: 800px) {
+    .video-container {
+      padding: 0 20px; /* Añadir un poco de espacio en los laterales en dispositivos móviles */
+    }
+  }
+  
+
+/* Estilos para la sección de la tabla y la imagen en pantallas anchas */
+@media screen and (min-width: 800px) {
+    .tabla-section1 {
+        padding: 0 10px;
+        flex-direction: column; /* Mostrar elementos en fila en pantallas anchas */
+        align-items: center; /* Alinear elementos verticalmente al centro */
+    }
+
+    .table-container {
+        margin: 10px;
+        width: 100%; /* La tabla ocupará el 50% del espacio disponible */
+        margin-right: 20px; /* Restaurar margen derecho */
+    }
+
+    .img-container {
+        width: 40%; /* La imagen ocupará el 40% del espacio disponible */
+    }
+}
+/* Estilos para la sección de la tabla y la imagen en pantallas anchas */
+@media screen and (min-width: 800px) {
+    .tabla-section3 {
+        padding: 0 10px;
+        flex-direction: column; /* Mostrar elementos en fila en pantallas anchas */
+        align-items: center; /* Alinear elementos verticalmente al centro */
+    }
+
+    .table-container {
+        margin-bottom: 10px;
+        width: 100%; /* La tabla ocupará el 50% del espacio disponible */
+        margin-right: 20px; /* Restaurar margen derecho */
+    }
+
+    .img-container {
+        width: 40%; /* La imagen ocupará el 40% del espacio disponible */
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
