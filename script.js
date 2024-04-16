@@ -1,5 +1,5 @@
 // Datos de ejemplo para los jugadores
-const jugadores = ['Blancaneta', 'Tasoct', 'Los Pitufos', 'Mobilidad', 'Albacete', 'Sierracar', 'Real Bestias', 'Radiopatio VC', 'Saoko', 'Cachuchos','Súbditos de Marguan'];
+const jugadores = ['Blancaneta', 'Tasoct', 'Los Pitufos', 'Mobilidad', 'Albacete', 'Sierracar', 'Real Bestias', 'Radiopatio VC', 'Saoko', 'Cachuchos','Súbditos de Marwan'];
 
 
 // Array para almacenar las partidas
@@ -94,37 +94,100 @@ function cambiarFechas(partidaId, nuevaFecha) {
 
 
 // Cambiar manualmente la fecha de una partida
-cambiarFechas(0, '17 de abril');
-cambiarFechas(54, '18 de abril');
-cambiarFechas(28, '19 de abril');
-cambiarFechas(20, '22 de abril');
+cambiarFechas(0, '17 de Abril');
+cambiarFechas(39, '18 de Abril');
+cambiarFechas(28, '19 de Abril');
+cambiarFechas(20, '22 de Abril');
+cambiarFechas(45, '24 de Abril');
+cambiarFechas(7, '25 de Abril');
+cambiarFechas(18, '26 de Abril');
+cambiarFechas(32, '29 de Abril'); 
+cambiarFechas(55, '06 de mayo'); 
+cambiarFechas(22, '08 de mayo'); 
+cambiarFechas(53, '09 de mayo'); 
+cambiarFechas(2, '10 de mayo'); 
+cambiarFechas(25, '13 de mayo'); 
+cambiarFechas(40, '15 de mayo'); 
+cambiarFechas(6, '16 de mayo'); 
+cambiarFechas(54, '17 de mayo'); 
+cambiarFechas(13, '20 de mayo'); 
+cambiarFechas(39, 'por definir'); 
 //cambiarFechas(55, 'por definir'); // no hay equipo 55, esta función sirve para quitar fecha a partidas
 
 
 
 
 
-// Función para mostrar las partidas en la tabla ordenadas por fecha y variable auxiliar
 function mostrarPartidas() {
     const tbody = document.querySelector('#partidas tbody');
     tbody.innerHTML = '';
 
+    // Crear un array de fechas únicas ordenadas cronológicamente
+    const fechasUnicas = obtenerFechasUnicas();
+    
+    // Asignar posiciones a las fechas en el array de fechas únicas
+    const fechaToPosicion = {};
+    fechasUnicas.forEach((fecha, index) => {
+        fechaToPosicion[fecha] = index;
+    });
+
     // Ordenar las partidas por fecha y variable auxiliar
     const partidasOrdenadas = partidas.sort((a, b) => {
-        if (a.fecha === b.fecha) {
-            return a.auxiliar - b.auxiliar; // Ordenar por la variable auxiliar si las fechas son iguales
+        const esPorDefinirA = a.fecha.includes('por definir');
+        const esPorDefinirB = b.fecha.includes('por definir');
+
+        if (esPorDefinirA && esPorDefinirB) {
+            return 0; // Mantener el orden relativo si ambos contienen "por definir"
+        } else if (esPorDefinirA) {
+            return 1; // Ordenar a con "por definir" después de b sin "por definir"
+        } else if (esPorDefinirB) {
+            return -1; // Ordenar b con "por definir" después de a sin "por definir"
         } else {
-            return a.fecha.localeCompare(b.fecha); // Ordenar por fecha si son diferentes
+            const contieneMayoA = a.fecha.includes('mayo');
+            const contieneMayoB = b.fecha.includes('mayo');
+
+            if (contieneMayoA && contieneMayoB) {
+                // Ordenar de menor a mayor por día si ambos contienen "mayo"
+                const diaA = parseInt(a.fecha.split(' ')[0]); // Obtener el día de la fecha A
+                const diaB = parseInt(b.fecha.split(' ')[0]); // Obtener el día de la fecha B
+                return diaA - diaB;
+            } else if (contieneMayoA) {
+                return 1; // Ordenar a con "mayo" después de b sin "mayo"
+            } else if (contieneMayoB) {
+                return -1; // Ordenar b con "mayo" después de a sin "mayo"
+            } else {
+                // Ordenar en orden normal por fecha si ninguno contiene "mayo"
+                return a.fecha.localeCompare(b.fecha);
+            }
         }
     });
 
     partidasOrdenadas.forEach(partida => {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${partida.fecha}</td> <!-- Cambiar "dia" a "fecha" -->
+        tr.innerHTML = `<td>${partida.fecha}</td> <!-- Mantener el formato de fecha original -->
                         <td>${partida.jugadores.join(' vs ')}</td>`;
         tbody.appendChild(tr);
     });
 }
+
+
+
+
+
+
+// Función para obtener un array de fechas únicas ordenadas cronológicamente
+function obtenerFechasUnicas() {
+    const fechasSet = new Set();
+    partidas.forEach(partida => {
+        fechasSet.add(partida.fecha);
+    });
+    return Array.from(fechasSet).sort();
+}
+
+// Llamar a la función para mostrar las partidas
+mostrarPartidas();
+
+
 
 // Objeto para almacenar partidas ganadas y puntos por cada jugador
 let jugadoresInfo = {};
@@ -194,10 +257,10 @@ function actualizarPuntos() {
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 0;
     
-    jugadoresInfo['Súbditos de Marguan'].partidasGanadas = 0;
-    jugadoresInfo['Súbditos de Marguan'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Súbditos de Marguan'].partidasEmpatadas = 0;
-    jugadoresInfo['Súbditos de Marguan'].partidasPerdidas = 0;
+    jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 0;
+    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 0;
+    jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 0;
     
     // Calcula los puntos
     for (const jugador in jugadoresInfo) {
