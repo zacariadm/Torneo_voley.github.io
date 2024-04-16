@@ -1,13 +1,16 @@
 // Datos de ejemplo para los jugadores
-const jugadores = ['Blancaneta', 'Tasoct', 'Los Pitufos', 'Mobilidad', 'Karasuno', 'Sierracar', 'Totitos VC', 'Radiopatio VC', 'Saoko', 'Cachuchos','Súbditos de Marguan'];
+const jugadores = ['Blancaneta', 'Tasoct', 'Los Pitufos', 'Mobilidad', 'Albacete', 'Sierracar', 'Real Bestias', 'Radiopatio VC', 'Saoko', 'Cachuchos','Súbditos de Marguan'];
+
 
 // Array para almacenar las partidas
+let partidaIdCounter = 0; // Contador para generar IDs únicos para las partidas
 const partidas = [];
 
 // Función para generar las partidas
 function generarPartidas() {
     // Reiniciar el array de partidas
     partidas.length = 0;
+    partidaIdCounter = 0; // Reiniciar el contador
 
     // Número máximo de partidas por día
     const maxPartidasPorDia = 1;
@@ -22,7 +25,7 @@ function generarPartidas() {
             });
 
             if (!yaSeEnfrentaron && partidasEnDia < maxPartidasPorDia) {
-                partidas.push({ dia: '', jugadores: [jugadores[i], jugadores[j]] });
+                partidas.push({ id: partidaIdCounter++, dia: '', jugadores: [jugadores[i], jugadores[j]] });
                 partidasEnDia++;
 
                 if (partidasEnDia >= maxPartidasPorDia) {
@@ -33,20 +36,71 @@ function generarPartidas() {
     }
 }
 
-// Función para asignar días a las partidas
-function asignarDias() {
-    const fechas = [];
-    let indexFecha = 0;
-    let indexAuxiliar = 1; // Variable auxiliar para mantener el orden de las fechas
-    partidas.forEach((partida, index) => {
-        partida.fecha = fechas[indexFecha]; // Cambiar el nombre de la propiedad a "fecha"
-        partida.auxiliar = indexAuxiliar; // Agregar la variable auxiliar
-        indexFecha = (indexFecha + 1) % fechas.length;
-        if (indexFecha === 0) {
-            indexAuxiliar++; // Incrementar la variable auxiliar cuando cambia la fecha
-        }
-    });
+// Función para asignar días a las partidas de manera aleatoria
+function asignarDias(fechas) {
+    // Verificar si las fechas ya están asignadas en el almacenamiento local
+    const fechasAsignadas = JSON.parse(localStorage.getItem('fechasAsignadas')) || {};
+
+    // Si no hay fechas asignadas en el almacenamiento local, asignarlas aleatoriamente
+    if (Object.keys(fechasAsignadas).length === 0) {
+        const fechasDisponibles = [...fechas]; // Copia de las fechas proporcionadas
+        const partidasAleatorias = shuffleArray(partidas.slice()); // Barajar el orden de las partidas
+
+        partidasAleatorias.forEach((partida, index) => {
+            if (fechasDisponibles.length > 0) {
+                // Seleccionar una fecha aleatoria de las fechas disponibles
+                const randomIndex = Math.floor(Math.random() * fechasDisponibles.length);
+                const fechaAsignada = fechasDisponibles[randomIndex];
+
+                // Asignar la fecha aleatoria a la partida
+                partida.fecha = fechaAsignada;
+                fechasAsignadas[partida.id] = fechaAsignada;
+
+                // Eliminar la fecha asignada de las fechas disponibles
+                fechasDisponibles.splice(randomIndex, 1);
+            } else {
+                // Si no quedan fechas disponibles, asignar "por definir"
+                partida.fecha = "por definir";
+            }
+        });
+    } else {
+        // Si las fechas ya están asignadas en el almacenamiento local, usarlas directamente
+        partidas.forEach((partida, index) => {
+            if (fechasAsignadas[partida.id]) {
+                partida.fecha = fechasAsignadas[partida.id];
+            } else {
+                partida.fecha = "por definir";
+            }
+        });
+    }
+
+    // Almacenar las fechas asignadas en el almacenamiento local
+    localStorage.setItem('fechasAsignadas', JSON.stringify(fechasAsignadas));
 }
+
+// Función para cambiar manualmente las fechas asignadas
+function cambiarFechas(partidaId, nuevaFecha) {
+    const fechasAsignadas = JSON.parse(localStorage.getItem('fechasAsignadas')) || {};
+    fechasAsignadas[partidaId] = nuevaFecha;
+    localStorage.setItem('fechasAsignadas', JSON.stringify(fechasAsignadas));
+
+    // Actualizar la fecha de la partida en el array de partidas
+    const partida = partidas.find(partida => partida.id === partidaId);
+    if (partida) {
+        partida.fecha = nuevaFecha;
+    }
+}
+
+
+
+// Cambiar manualmente la fecha de una partida
+cambiarFechas(0, '17 de abril');
+cambiarFechas(54, '18 de abril');
+cambiarFechas(28, '19 de abril');
+// cambiarFechas(0, '09 de abril');
+
+
+
 
 // Función para mostrar las partidas en la tabla ordenadas por fecha y variable auxiliar
 function mostrarPartidas() {
@@ -108,20 +162,20 @@ function actualizarPuntos() {
     jugadoresInfo['Mobilidad'].partidasEmpatadas = 0;
     jugadoresInfo['Mobilidad'].partidasPerdidas = 0;
 
-    jugadoresInfo['Karasuno'].partidasGanadas = 0;
-    jugadoresInfo['Karasuno'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Karasuno'].partidasEmpatadas = 0;
-    jugadoresInfo['Karasuno'].partidasPerdidas = 0;
+    jugadoresInfo['Albacete'].partidasGanadas = 0;
+    jugadoresInfo['Albacete'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Albacete'].partidasEmpatadas = 0;
+    jugadoresInfo['Albacete'].partidasPerdidas = 0;
 
     jugadoresInfo['Sierracar'].partidasGanadas = 0;
     jugadoresInfo['Sierracar'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Sierracar'].partidasEmpatadas = 0;
     jugadoresInfo['Sierracar'].partidasPerdidas = 0;
 
-    jugadoresInfo['Totitos VC'].partidasGanadas = 0;
-    jugadoresInfo['Totitos VC'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Totitos VC'].partidasEmpatadas = 0;
-    jugadoresInfo['Totitos VC'].partidasPerdidas = 0;
+    jugadoresInfo['Real Bestias'].partidasGanadas = 0;
+    jugadoresInfo['Real Bestias'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Real Bestias'].partidasEmpatadas = 0;
+    jugadoresInfo['Real Bestias'].partidasPerdidas = 0;
 
     jugadoresInfo['Radiopatio VC'].partidasGanadas = 0;
     jugadoresInfo['Radiopatio VC'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
