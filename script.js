@@ -94,14 +94,14 @@ function cambiarFechas(partidaId, nuevaFecha) {
 
 
 // Cambiar manualmente la fecha de una partida
-cambiarFechas(0, '17 de Abril');
-cambiarFechas(39, '18 de Abril');
-cambiarFechas(28, '19 de Abril');
-cambiarFechas(20, '22 de Abril');
-cambiarFechas(45, '24 de Abril');
-cambiarFechas(7, '25 de Abril');
-cambiarFechas(18, '26 de Abril');
-cambiarFechas(32, '29 de Abril'); 
+cambiarFechas(0, '17 de abril');
+cambiarFechas(39, '18 de abril');
+cambiarFechas(28, '19 de abril');
+cambiarFechas(20, '22 de abril');
+cambiarFechas(45, '24 de abril');
+cambiarFechas(7, '25 de abril');
+cambiarFechas(18, '26 de abril');
+cambiarFechas(32, '29 de abril'); 
 cambiarFechas(55, '06 de mayo'); 
 cambiarFechas(22, '08 de mayo'); 
 cambiarFechas(53, '09 de mayo'); 
@@ -111,7 +111,7 @@ cambiarFechas(40, '15 de mayo');
 cambiarFechas(6, '16 de mayo'); 
 cambiarFechas(54, '17 de mayo'); 
 cambiarFechas(13, '20 de mayo'); 
-cambiarFechas(39, 'por definir'); 
+
 //cambiarFechas(55, 'por definir'); // no hay equipo 55, esta función sirve para quitar fecha a partidas
 
 
