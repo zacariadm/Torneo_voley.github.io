@@ -264,3 +264,21 @@ table th {
     }
 }
 
+.modal-body img {
+    max-width: 100%; /* Establecer el ancho máximo al 100% */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+
+  .video-container {
+    max-width: 100%; /* Ajustar el ancho máximo del contenedor de video */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+  
+  .video-container video {
+    width: 100%; /* Hacer que el video ocupe todo el ancho del contenedor */
+    height: auto; /* Permitir que la altura se ajuste automáticamente según el ancho */
+  }
+  
