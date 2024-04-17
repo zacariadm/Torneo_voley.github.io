@@ -207,15 +207,15 @@ function actualizarPuntos() {
     inicializarJugadoresInfo();
     
     // Define el número de partidas jugadas manualmente para cada jugador
-    jugadoresInfo['Blancaneta'].partidasGanadas = 0;
-    jugadoresInfo['Blancaneta'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Blancaneta'].partidasGanadas = 1;
+    jugadoresInfo['Blancaneta'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Blancaneta'].partidasEmpatadas = 0;
     jugadoresInfo['Blancaneta'].partidasPerdidas = 0;
 
     jugadoresInfo['Tasoct'].partidasGanadas = 0;
-    jugadoresInfo['Tasoct'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Tasoct'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Tasoct'].partidasEmpatadas = 0;
-    jugadoresInfo['Tasoct'].partidasPerdidas = 0;
+    jugadoresInfo['Tasoct'].partidasPerdidas = 1;
 
     jugadoresInfo['Los Pitufos'].partidasGanadas = 0;
     jugadoresInfo['Los Pitufos'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
@@ -264,10 +264,7 @@ function actualizarPuntos() {
     
     // Calcula los puntos
     for (const jugador in jugadoresInfo) {
-        jugadoresInfo[jugador].puntos = jugadoresInfo[jugador].partidasGanadas * 3; // Cada partida ganada suma 3 puntos
-    }
-    for (const jugador in jugadoresInfo) {
-        jugadoresInfo[jugador].puntos = jugadoresInfo[jugador].partidasEmpatadas * 1; // Cada partida ganada suma 3 puntos
+        jugadoresInfo[jugador].puntos = jugadoresInfo[jugador].partidasGanadas * 3 + jugadoresInfo[jugador].partidasEmpatadas * 1; // Cada partida ganada suma 3 puntos y cada partida empatada suma 1 punto
     }
     mostrarPuntos();
 }
@@ -303,9 +300,9 @@ function mostrarPuntos() {
         if (posicion === 1) {
             tr.style.color = 'gold'; // Oro para el primero
         } else if (posicion === 2) {
-            tr.style.color = 'silver'; // Plata para el segundo
+            tr.style.color = '#c0c0c0'; // Plata para el segundo
         } else if (posicion === 3) {
-            tr.style.color = '#cd7f32'; // Bronce para el tercero
+            tr.style.color = '#cd853f'; // Bronce para el tercero
         }
     });
 }
@@ -321,7 +318,7 @@ function agregarResultado(dia, enfrentamiento, ganador) {
 }  
 // Resultados 
 
-agregarResultado('...', '...', '...');
+agregarResultado('17 de abril', 'Blancaneta vs Tasoct', 'Blancaneta');
 
 
 
