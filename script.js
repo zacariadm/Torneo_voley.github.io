@@ -227,8 +227,8 @@ function actualizarPuntos() {
     jugadoresInfo['Mobilidad'].partidasEmpatadas = 0;
     jugadoresInfo['Mobilidad'].partidasPerdidas = 0;
 
-    jugadoresInfo['Albacete'].partidasGanadas = 0;
-    jugadoresInfo['Albacete'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Albacete'].partidasGanadas = 1;
+    jugadoresInfo['Albacete'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Albacete'].partidasEmpatadas = 0;
     jugadoresInfo['Albacete'].partidasPerdidas = 0;
 
@@ -258,9 +258,9 @@ function actualizarPuntos() {
     jugadoresInfo['Cachuchos'].partidasPerdidas = 0;
     
     jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 0;
-    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 0;
-    jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 0;
+    jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 1;
     
     // Calcula los puntos
     for (const jugador in jugadoresInfo) {
@@ -319,7 +319,7 @@ function agregarResultado(dia, enfrentamiento, ganador) {
 // Resultados 
 
 agregarResultado('17 de abril', 'Blancaneta vs Tasoct', 'Blancaneta');
-
+agregarResultado('18 de abril', 'Albacete vs Súbditos de Marwan', 'Albacete');
 
 
 
