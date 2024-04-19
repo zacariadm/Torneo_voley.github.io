@@ -254,8 +254,8 @@ function actualizarPuntos() {
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
     jugadoresInfo['Saoko'].partidasPerdidas = 1;
     
-    jugadoresInfo['Cachuchos'].partidasGanadas = 1;
-    jugadoresInfo['Cachuchos'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Cachuchos'].partidasGanadas = 0;
+    jugadoresInfo['Cachuchos'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
