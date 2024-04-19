@@ -1,5 +1,5 @@
 // Datos de ejemplo para los jugadores
-const jugadores = ['Blancaneta', 'Tasoct', 'Los Pitufos', 'Mobilidad', 'Albacete', 'Sierracar', 'Real Bestias', 'Radiopatio VC', 'Saoko', 'Cachuchos','Súbditos de Marwan'];
+const jugadores = ['Blancaneta', 'Tasoct', 'Los Pitufos', 'Movilidad', 'Albacete', 'Sierracar', 'Real Bestias', 'Radiopatio VC', 'Saoko', 'Cachuchos','Súbditos de Marwan'];
 
 
 // Array para almacenar las partidas
@@ -222,10 +222,10 @@ function actualizarPuntos() {
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
     jugadoresInfo['Los Pitufos'].partidasPerdidas = 0;
 
-    jugadoresInfo['Mobilidad'].partidasGanadas = 0;
-    jugadoresInfo['Mobilidad'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Mobilidad'].partidasEmpatadas = 0;
-    jugadoresInfo['Mobilidad'].partidasPerdidas = 0;
+    jugadoresInfo['Movilidad'].partidasGanadas = 0;
+    jugadoresInfo['Movilidad'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Movilidad'].partidasEmpatadas = 0;
+    jugadoresInfo['Movilidad'].partidasPerdidas = 0;
 
     jugadoresInfo['Albacete'].partidasGanadas = 1;
     jugadoresInfo['Albacete'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
