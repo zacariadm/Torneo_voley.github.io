@@ -96,7 +96,9 @@ function cambiarFechas(partidaId, nuevaFecha) {
 // Cambiar manualmente la fecha de una partida
 cambiarFechas(0, '17 de abril');
 cambiarFechas(39, '18 de abril');
-cambiarFechas(28, '19 de abril');
+cambiarFechas(28, 'por definir'); // no te olvides de quitar
+cambiarFechas(46, '19 de abril');
+cambiarFechas(43, '19 de abril');
 cambiarFechas(20, '22 de abril');
 cambiarFechas(45, '24 de abril');
 cambiarFechas(7, '25 de abril');
@@ -232,13 +234,13 @@ function actualizarPuntos() {
     jugadoresInfo['Albacete'].partidasEmpatadas = 0;
     jugadoresInfo['Albacete'].partidasPerdidas = 0;
 
-    jugadoresInfo['Sierracar'].partidasGanadas = 0;
-    jugadoresInfo['Sierracar'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Sierracar'].partidasGanadas = 1;
+    jugadoresInfo['Sierracar'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Sierracar'].partidasEmpatadas = 0;
     jugadoresInfo['Sierracar'].partidasPerdidas = 0;
 
-    jugadoresInfo['Real Bestias'].partidasGanadas = 0;
-    jugadoresInfo['Real Bestias'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Real Bestias'].partidasGanadas = 1;
+    jugadoresInfo['Real Bestias'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Real Bestias'].partidasEmpatadas = 0;
     jugadoresInfo['Real Bestias'].partidasPerdidas = 0;
 
@@ -248,14 +250,14 @@ function actualizarPuntos() {
     jugadoresInfo['Radiopatio VC'].partidasPerdidas = 0;
 
     jugadoresInfo['Saoko'].partidasGanadas = 0;
-    jugadoresInfo['Saoko'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Saoko'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
-    jugadoresInfo['Saoko'].partidasPerdidas = 0;
+    jugadoresInfo['Saoko'].partidasPerdidas = 1;
     
-    jugadoresInfo['Cachuchos'].partidasGanadas = 0;
+    jugadoresInfo['Cachuchos'].partidasGanadas = 1;
     jugadoresInfo['Cachuchos'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
-    jugadoresInfo['Cachuchos'].partidasPerdidas = 0;
+    jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
     jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 0;
     jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
@@ -320,6 +322,9 @@ function agregarResultado(dia, enfrentamiento, ganador) {
 
 agregarResultado('17 de abril', 'Blancaneta vs Tasoct', 'Blancaneta');
 agregarResultado('18 de abril', 'Albacete vs Súbditos de Marwan', 'Albacete');
+agregarResultado('19 de abril', 'Sierracar vs Cachuchos', 'Sierracar');
+agregarResultado('19 de abril', 'Real Bestias vs Saoko', 'Real Bestias');
+
 
 
 
