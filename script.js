@@ -220,17 +220,17 @@ function actualizarPuntos() {
     jugadoresInfo['Tasoct'].partidasPerdidas = 1;
 
     jugadoresInfo['Los Pitufos'].partidasGanadas = 0;
-    jugadoresInfo['Los Pitufos'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Los Pitufos'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
-    jugadoresInfo['Los Pitufos'].partidasPerdidas = 0;
+    jugadoresInfo['Los Pitufos'].partidasPerdidas = 1;
 
     jugadoresInfo['Movilidad'].partidasGanadas = 0;
     jugadoresInfo['Movilidad'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Movilidad'].partidasEmpatadas = 0;
     jugadoresInfo['Movilidad'].partidasPerdidas = 0;
 
-    jugadoresInfo['Albacete'].partidasGanadas = 1;
-    jugadoresInfo['Albacete'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Albacete'].partidasGanadas = 2;
+    jugadoresInfo['Albacete'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Albacete'].partidasEmpatadas = 0;
     jugadoresInfo['Albacete'].partidasPerdidas = 0;
 
@@ -250,17 +250,17 @@ function actualizarPuntos() {
     jugadoresInfo['Radiopatio VC'].partidasPerdidas = 0;
 
     jugadoresInfo['Saoko'].partidasGanadas = 0;
-    jugadoresInfo['Saoko'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Saoko'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
-    jugadoresInfo['Saoko'].partidasPerdidas = 1;
+    jugadoresInfo['Saoko'].partidasPerdidas = 2;
     
     jugadoresInfo['Cachuchos'].partidasGanadas = 0;
     jugadoresInfo['Cachuchos'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
-    jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 0;
-    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 1;
+    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 0;
     jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 1;
     
@@ -324,7 +324,8 @@ agregarResultado('17 de abril', 'Blancaneta vs Tasoct', 'Blancaneta');
 agregarResultado('18 de abril', 'Albacete vs Súbditos de Marwan', 'Albacete');
 agregarResultado('19 de abril', 'Sierracar vs Cachuchos', 'Sierracar');
 agregarResultado('19 de abril', 'Real Bestias vs Saoko', 'Real Bestias');
-
+agregarResultado('22 de abril', 'Los Pitufos vs Albacete', 'Albacete');
+agregarResultado('22 de abril', 'Saoko vs Súbditos de Marwan', 'Súbditos de Marwan');
 
 
 
