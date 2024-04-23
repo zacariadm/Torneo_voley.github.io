@@ -96,23 +96,52 @@ function cambiarFechas(partidaId, nuevaFecha) {
 // Cambiar manualmente la fecha de una partida
 cambiarFechas(0, '17 de abril');
 cambiarFechas(39, '18 de abril');
-cambiarFechas(28, 'por definir'); // no te olvides de quitar
 cambiarFechas(46, '19 de abril');
 cambiarFechas(43, '19 de abril');
 cambiarFechas(20, '22 de abril');
-cambiarFechas(45, '24 de abril');
+cambiarFechas(53, '22 de abril');
+cambiarFechas(4, '24 de abril');
+cambiarFechas(32, '24 de abril');
 cambiarFechas(7, '25 de abril');
-cambiarFechas(18, '26 de abril');
-cambiarFechas(32, '29 de abril'); 
-cambiarFechas(55, '06 de mayo'); 
-cambiarFechas(22, '08 de mayo'); 
-cambiarFechas(53, '09 de mayo'); 
-cambiarFechas(2, '10 de mayo'); 
-cambiarFechas(25, '13 de mayo'); 
-cambiarFechas(40, '15 de mayo'); 
-cambiarFechas(6, '16 de mayo'); 
-cambiarFechas(54, '17 de mayo'); 
-cambiarFechas(13, '20 de mayo'); 
+cambiarFechas(48, '25 de abril');
+cambiarFechas(34, '26 de abril');
+cambiarFechas(10, '26 de abril');
+cambiarFechas(50, '26 de abril');
+cambiarFechas(25, '29 de abril');
+cambiarFechas(13, '29 de abril');
+cambiarFechas(36, '06 de mayo');
+cambiarFechas(16, '06 de mayo');
+cambiarFechas(28, '07 de mayo');
+cambiarFechas(17, '07 de mayo');
+cambiarFechas(22, '08 de mayo');
+cambiarFechas(18, '08 de mayo');
+cambiarFechas(3, '09 de mayo');
+cambiarFechas(31, '09 de mayo');
+cambiarFechas(2, '10 de mayo');
+cambiarFechas(12, '10 de mayo');
+cambiarFechas(54, '10 de mayo');
+cambiarFechas(30, '13 de mayo');
+cambiarFechas(42, '13 de mayo');
+cambiarFechas(36, '14 de mayo');
+cambiarFechas(40, '14 de mayo');
+cambiarFechas(8, '15 de mayo');
+cambiarFechas(21, '15 de mayo');
+cambiarFechas(6, '16 de mayo');
+cambiarFechas(24, '16 de mayo');
+cambiarFechas(29, '17 de mayo');
+cambiarFechas(49, '17 de mayo');
+cambiarFechas(5, '17 de mayo');
+cambiarFechas(51, '20 de mayo');
+cambiarFechas(37, '20 de mayo');
+cambiarFechas(14, '21 de mayo');
+cambiarFechas(19, '21 de mayo');
+cambiarFechas(52, '22 de mayo');
+cambiarFechas(23, '22 de mayo');
+cambiarFechas(6, '23 de mayo');
+cambiarFechas(33, '23 de mayo');
+cambiarFechas(35, '24 de mayo');
+cambiarFechas(26, '24 de mayo');
+cambiarFechas(11, '24 de mayo');
 
 //cambiarFechas(55, 'por definir'); // no hay equipo 55, esta función sirve para quitar fecha a partidas
 
