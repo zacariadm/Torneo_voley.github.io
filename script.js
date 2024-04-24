@@ -93,54 +93,9 @@ function cambiarFechas(partidaId, nuevaFecha) {
 
 
 
-cambiarFechas(0, 'por definir');
-cambiarFechas(39, 'por definir');
-cambiarFechas(46, 'por definir');
-cambiarFechas(43, 'por definir');
-cambiarFechas(20, 'por definir');
-cambiarFechas(53, 'por definir');
-cambiarFechas(1, 'por definir');
-cambiarFechas(32, 'por definir');
-cambiarFechas(7, 'por definir');
-cambiarFechas(22, 'por definir');
-cambiarFechas(34, 'por definir');
-cambiarFechas(10, 'por definir');
-cambiarFechas(50, 'por definir');
-cambiarFechas(25, 'por definir');
-cambiarFechas(13, 'por definir');
-cambiarFechas(36, 'por definir');
-cambiarFechas(16, 'por definir');
-cambiarFechas(28, 'por definir');
-cambiarFechas(17, 'por definir');
-cambiarFechas(48, 'por definir');
-cambiarFechas(3, 'por definir');
-cambiarFechas(18, 'por definir');
-cambiarFechas(31, 'por definir');
-cambiarFechas(2, 'por definir');
-cambiarFechas(12, 'por definir');
-cambiarFechas(54, 'por definir');
-cambiarFechas(30, 'por definir');
-cambiarFechas(42, 'por definir');
-cambiarFechas(36, 'por definir');
-cambiarFechas(40, 'por definir');
-cambiarFechas(5, 'por definir');
-cambiarFechas(44, 'por definir');
-cambiarFechas(6, 'por definir');
-cambiarFechas(24, 'por definir');
-cambiarFechas(29, 'por definir');
-cambiarFechas(49, 'por definir');
-cambiarFechas(8, 'por definir');
-cambiarFechas(51, 'por definir');
-cambiarFechas(37, 'por definir');
-cambiarFechas(14, 'por definir');
-cambiarFechas(19, 'por definir');
-cambiarFechas(52, 'por definir');
-cambiarFechas(23, 'por definir');
-cambiarFechas(6, 'por definir');
-cambiarFechas(33, 'por definir');
-cambiarFechas(35, 'por definir');
-cambiarFechas(26, 'por definir');
-cambiarFechas(11, 'por definir');
+cambiarFechas(4, 'por definir');
+cambiarFechas(45, 'por definir');
+cambiarFechas(21, 'por definir');
 
 
 //cambiarFechas(55, 'por definir'); // no hay equipo 55, esta función sirve para quitar fecha a partidas
