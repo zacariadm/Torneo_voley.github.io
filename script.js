@@ -100,10 +100,10 @@ cambiarFechas(46, '19 de abril');
 cambiarFechas(43, '19 de abril');
 cambiarFechas(20, '22 de abril');
 cambiarFechas(53, '22 de abril');
-cambiarFechas(4, '24 de abril');
+cambiarFechas(1, '24 de abril');
 cambiarFechas(32, '24 de abril');
 cambiarFechas(7, '25 de abril');
-cambiarFechas(48, '25 de abril');
+cambiarFechas(22, '25 de abril');
 cambiarFechas(34, '26 de abril');
 cambiarFechas(10, '26 de abril');
 cambiarFechas(50, '26 de abril');
@@ -113,9 +113,9 @@ cambiarFechas(36, '06 de mayo');
 cambiarFechas(16, '06 de mayo');
 cambiarFechas(28, '07 de mayo');
 cambiarFechas(17, '07 de mayo');
-cambiarFechas(22, '08 de mayo');
-cambiarFechas(18, '08 de mayo');
-cambiarFechas(3, '09 de mayo');
+cambiarFechas(48, '08 de mayo');
+cambiarFechas(3, '08 de mayo');
+cambiarFechas(18, '09 de mayo');
 cambiarFechas(31, '09 de mayo');
 cambiarFechas(2, '10 de mayo');
 cambiarFechas(12, '10 de mayo');
@@ -125,7 +125,7 @@ cambiarFechas(42, '13 de mayo');
 cambiarFechas(36, '14 de mayo');
 cambiarFechas(40, '14 de mayo');
 cambiarFechas(8, '15 de mayo');
-cambiarFechas(21, '15 de mayo');
+cambiarFechas(44, '15 de mayo');
 cambiarFechas(6, '16 de mayo');
 cambiarFechas(24, '16 de mayo');
 cambiarFechas(29, '17 de mayo');
@@ -238,8 +238,8 @@ function actualizarPuntos() {
     inicializarJugadoresInfo();
     
     // Define el número de partidas jugadas manualmente para cada jugador
-    jugadoresInfo['Blancaneta'].partidasGanadas = 1;
-    jugadoresInfo['Blancaneta'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Blancaneta'].partidasGanadas = 2;
+    jugadoresInfo['Blancaneta'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Blancaneta'].partidasEmpatadas = 0;
     jugadoresInfo['Blancaneta'].partidasPerdidas = 0;
 
@@ -249,14 +249,14 @@ function actualizarPuntos() {
     jugadoresInfo['Tasoct'].partidasPerdidas = 1;
 
     jugadoresInfo['Los Pitufos'].partidasGanadas = 0;
-    jugadoresInfo['Los Pitufos'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Los Pitufos'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
-    jugadoresInfo['Los Pitufos'].partidasPerdidas = 1;
+    jugadoresInfo['Los Pitufos'].partidasPerdidas = 2;
 
     jugadoresInfo['Movilidad'].partidasGanadas = 0;
-    jugadoresInfo['Movilidad'].partidasJugadas = 0; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Movilidad'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Movilidad'].partidasEmpatadas = 0;
-    jugadoresInfo['Movilidad'].partidasPerdidas = 0;
+    jugadoresInfo['Movilidad'].partidasPerdidas = 1;
 
     jugadoresInfo['Albacete'].partidasGanadas = 2;
     jugadoresInfo['Albacete'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
@@ -283,8 +283,8 @@ function actualizarPuntos() {
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
     jugadoresInfo['Saoko'].partidasPerdidas = 2;
     
-    jugadoresInfo['Cachuchos'].partidasGanadas = 0;
-    jugadoresInfo['Cachuchos'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Cachuchos'].partidasGanadas = 1;
+    jugadoresInfo['Cachuchos'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
