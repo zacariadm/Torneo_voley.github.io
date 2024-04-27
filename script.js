@@ -291,17 +291,17 @@ function actualizarPuntos() {
     jugadoresInfo['Real Bestias'].partidasPerdidas = 0;
 
     jugadoresInfo['Radiopatio VC'].partidasGanadas = 0;
-    jugadoresInfo['Radiopatio VC'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Radiopatio VC'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Radiopatio VC'].partidasEmpatadas = 0;
-    jugadoresInfo['Radiopatio VC'].partidasPerdidas = 1;
+    jugadoresInfo['Radiopatio VC'].partidasPerdidas = 2;
 
     jugadoresInfo['Saoko'].partidasGanadas = 2;
     jugadoresInfo['Saoko'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
     jugadoresInfo['Saoko'].partidasPerdidas = 2;
     
-    jugadoresInfo['Cachuchos'].partidasGanadas = 1;
-    jugadoresInfo['Cachuchos'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Cachuchos'].partidasGanadas = 2;
+    jugadoresInfo['Cachuchos'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
@@ -378,7 +378,7 @@ agregarResultado('25 de abril', 'Blancaneta vs Saoko', 'Saoko');
 agregarResultado('25 de abril', 'Los pitufos vs Real Bestias', 'Real Bestias');
 agregarResultado('26 de abril', 'Radiopatio vc vs Saoko', 'Saoko');
 agregarResultado('26 de abril', 'Albacete vs Sierracar', 'Sierracar');
-
+agregarResultado('26 de abril', 'Radiopatio vc vs Cachuchos', 'Cachuchos');
 
 
 
