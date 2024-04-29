@@ -260,15 +260,15 @@ function actualizarPuntos() {
     jugadoresInfo['Blancaneta'].partidasEmpatadas = 0;
     jugadoresInfo['Blancaneta'].partidasPerdidas = 1;
 
-    jugadoresInfo['Tasoct'].partidasGanadas = 0;
-    jugadoresInfo['Tasoct'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Tasoct'].partidasGanadas = 1;
+    jugadoresInfo['Tasoct'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Tasoct'].partidasEmpatadas = 0;
     jugadoresInfo['Tasoct'].partidasPerdidas = 1;
 
     jugadoresInfo['Los Pitufos'].partidasGanadas = 0;
-    jugadoresInfo['Los Pitufos'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Los Pitufos'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
-    jugadoresInfo['Los Pitufos'].partidasPerdidas = 3;
+    jugadoresInfo['Los Pitufos'].partidasPerdidas = 4;
 
     jugadoresInfo['Movilidad'].partidasGanadas = 0;
     jugadoresInfo['Movilidad'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
@@ -296,12 +296,12 @@ function actualizarPuntos() {
     jugadoresInfo['Radiopatio VC'].partidasPerdidas = 2;
 
     jugadoresInfo['Saoko'].partidasGanadas = 2;
-    jugadoresInfo['Saoko'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Saoko'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
-    jugadoresInfo['Saoko'].partidasPerdidas = 2;
+    jugadoresInfo['Saoko'].partidasPerdidas = 3;
     
-    jugadoresInfo['Cachuchos'].partidasGanadas = 2;
-    jugadoresInfo['Cachuchos'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Cachuchos'].partidasGanadas = 3;
+    jugadoresInfo['Cachuchos'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
@@ -379,8 +379,8 @@ agregarResultado('25 de abril', 'Los pitufos vs Real Bestias', 'Real Bestias');
 agregarResultado('26 de abril', 'Radiopatio vc vs Saoko', 'Saoko');
 agregarResultado('26 de abril', 'Albacete vs Sierracar', 'Sierracar');
 agregarResultado('26 de abril', 'Radiopatio vc vs Cachuchos', 'Cachuchos');
-
-
+agregarResultado('29 de abril', 'Tasoct vs Saoko', 'Tasoct');
+agregarResultado('29 de abril', 'Los pitufos vs Cachuchos', 'Cachuchos');
 
 // Llamar a la función para generar las partidas al cargar la página
 window.onload = function() {
