@@ -12,205 +12,76 @@ function generarPartidas() {
     partidas.length = 0;
     partidaIdCounter = 0; // Reiniciar el contador
 
-    // Número máximo de partidas por día
-    const maxPartidasPorDia = 1;
-    let partidasEnDia = 0;
+    // Añadir las partidas manualmente con sus fechas
+    agregarPartida('17 de abril', 'Blancaneta', 'Tasoct');
+    agregarPartida('18 de abril', 'Albacete', 'Súbditos de marwan');
+    agregarPartida('19 de abril', 'Sierracar', 'Real Bestias');
+    agregarPartida('19 de abril', 'Sierracar', 'Cachuchos');
+    agregarPartida('22 de abril', 'Los pitufos', 'Albacete');
+    agregarPartida('22 de abril', 'Cachuchos', 'Súbditos de marwan');
+    agregarPartida('24 de abril', 'Blancaneta', 'Los Pitufos');
+    agregarPartida('24 de abril', 'Movilidad', 'Cachuchos');
+    agregarPartida('25 de abril', 'Blancaneta', 'Saoko');
+    agregarPartida('25 de abril', 'Los pitufos', 'Real Bestias');
+    agregarPartida('26 de abril', 'Albacete', 'Sierracar');
+    agregarPartida('26 de abril', 'Radiopatio vc', 'Saoko');
+    agregarPartida('26 de abril', 'Radiopatio vc', 'Cachuchos');
+    agregarPartida('29 de abril', 'Los pitufos', 'Cachuchos');
+    agregarPartida('29 de abril', 'Tasoct', 'Saoko');
+    agregarPartida('06 de mayo', 'Albacete', 'Radiopatio vc');
+    agregarPartida('06 de mayo', 'Tasoct', 'Sierracar');
+    agregarPartida('07 de mayo', 'Movilidad', 'Sierracar');
+    agregarPartida('07 de mayo', 'Tasoct', 'Cachuchos');
+    agregarPartida('08 de mayo', 'Real Bestias', 'Súbditos de marwan');
+    agregarPartida('08 de mayo', 'Blancaneta', 'Albacete');
+    agregarPartida('09 de mayo', 'Tasoct', 'Súbditos de marwan');
+    agregarPartida('09 de mayo', 'Movilidad', 'Saoko');
+    agregarPartida('10 de mayo', 'Blancaneta', 'Movilidad');
+    agregarPartida('10 de mayo', 'Tasoct', 'Albacete');
+    agregarPartida('10 de mayo', 'Cachuchos', 'Súbditos de marwan');
+    agregarPartida('13 de mayo', 'Movilidad', 'Radiopatio vc');
+    agregarPartida('13 de mayo', 'Sierracar', 'Saoko');
+    agregarPartida('14 de mayo', 'Albacete', 'Radiopatio vc');
+    agregarPartida('14 de mayo', 'Sierracar', 'Real Bestias');
+    agregarPartida('15 de mayo', 'Blancaneta', 'Real Bestias');
+    agregarPartida('15 de mayo', 'Sierracar', 'Súbditos de marwan');
+    agregarPartida('16 de mayo', 'Blancaneta', 'Radiopatio vc');
+    agregarPartida('16 de mayo', 'Los pitufos', 'Saoko');
+    agregarPartida('17 de mayo', 'Movilidad', 'Real Bestias');
+    agregarPartida('17 de mayo', 'Tasoct', 'Los pitufos');
+    agregarPartida('17 de mayo', 'Blancaneta', 'Cachuchos');
+    agregarPartida('20 de mayo', 'Radiopatio vc', 'Súbditos de marwan');
+    agregarPartida('20 de mayo', 'Albacete', 'Saoko');
+    agregarPartida('21 de mayo', 'Tasoct', 'Real Bestias');
+    agregarPartida('21 de mayo', 'Los pitufos', 'Movilidad');
+    agregarPartida('22 de mayo', 'Saoko', 'Cachuchos');
+    agregarPartida('22 de mayo', 'Los pitufos', 'Radiopatio vc');
+    agregarPartida('23 de mayo', 'Blancaneta', 'Radiopatio vc');
+    agregarPartida('23 de mayo', 'Movilidad', 'Súbditos de marwan');
+    agregarPartida('24 de mayo', 'Albacete', 'Real Bestias');
+    agregarPartida('24 de mayo', 'Los pitufos', 'Súbditos de marwan');
+    agregarPartida('24 de mayo', 'Tasoct', 'Movilidad');
+    
+    // Continuar con las demás partidas
 
-    // Iterar sobre los jugadores
-    for (let i = 0; i < jugadores.length; i++) {
-        for (let j = i + 1; j < jugadores.length; j++) {
-            // Verificar si ya se enfrentaron
-            const yaSeEnfrentaron = partidas.some(partida => {
-                return (partida.jugadores.includes(jugadores[i]) && partida.jugadores.includes(jugadores[j]));
-            });
-
-            if (!yaSeEnfrentaron && partidasEnDia < maxPartidasPorDia) {
-                partidas.push({ id: partidaIdCounter++, dia: '', jugadores: [jugadores[i], jugadores[j]] });
-                partidasEnDia++;
-
-                if (partidasEnDia >= maxPartidasPorDia) {
-                    partidasEnDia = 0; // Reiniciar el contador de partidas para el próximo día
-                }
-            }
-        }
-    }
+    // Mostrar las partidas después de generarlas
+    mostrarPartidas();
+    actualizarPuntos();
 }
 
-// Función para asignar días a las partidas de manera aleatoria
-function asignarDias(fechas) {
-    // Verificar si las fechas ya están asignadas en el almacenamiento local
-    const fechasAsignadas = JSON.parse(localStorage.getItem('fechasAsignadas')) || {};
-
-    // Si no hay fechas asignadas en el almacenamiento local, asignarlas aleatoriamente
-    if (Object.keys(fechasAsignadas).length === 0) {
-        const fechasDisponibles = [...fechas]; // Copia de las fechas proporcionadas
-        const partidasAleatorias = shuffleArray(partidas.slice()); // Barajar el orden de las partidas
-
-        partidasAleatorias.forEach((partida, index) => {
-            if (fechasDisponibles.length > 0) {
-                // Seleccionar una fecha aleatoria de las fechas disponibles
-                const randomIndex = Math.floor(Math.random() * fechasDisponibles.length);
-                const fechaAsignada = fechasDisponibles[randomIndex];
-
-                // Asignar la fecha aleatoria a la partida
-                partida.fecha = fechaAsignada;
-                fechasAsignadas[partida.id] = fechaAsignada;
-
-                // Eliminar la fecha asignada de las fechas disponibles
-                fechasDisponibles.splice(randomIndex, 1);
-            } else {
-                // Si no quedan fechas disponibles, asignar "por definir"
-                partida.fecha = "por definir";
-            }
-        });
-    } else {
-        // Si las fechas ya están asignadas en el almacenamiento local, usarlas directamente
-        partidas.forEach((partida, index) => {
-            if (fechasAsignadas[partida.id]) {
-                partida.fecha = fechasAsignadas[partida.id];
-            } else {
-                partida.fecha = "por definir";
-            }
-        });
-    }
-
-    // Almacenar las fechas asignadas en el almacenamiento local
-    localStorage.setItem('fechasAsignadas', JSON.stringify(fechasAsignadas));
+// Función para agregar una partida manualmente
+function agregarPartida(fecha, jugador1, jugador2) {
+    partidas.push({ id: partidaIdCounter++, fecha: fecha, jugadores: [jugador1, jugador2] });
 }
 
-// Función para cambiar manualmente las fechas asignadas
-function cambiarFechas(partidaId, nuevaFecha) {
-    const fechasAsignadas = JSON.parse(localStorage.getItem('fechasAsignadas')) || {};
-    fechasAsignadas[partidaId] = nuevaFecha;
-    localStorage.setItem('fechasAsignadas', JSON.stringify(fechasAsignadas));
-
-    // Actualizar la fecha de la partida en el array de partidas
-    const partida = partidas.find(partida => partida.id === partidaId);
-    if (partida) {
-        partida.fecha = nuevaFecha;
-    }
-}
-
-
-
-
-cambiarFechas(0, '17 de abril');
-cambiarFechas(39, '18 de abril');
-cambiarFechas(46, '19 de abril');
-cambiarFechas(43, '19 de abril');
-cambiarFechas(20, '22 de abril');
-cambiarFechas(53, '22 de abril');
-cambiarFechas(1, '24 de abril');
-cambiarFechas(32, '24 de abril');
-cambiarFechas(7, '25 de abril');
-cambiarFechas(22, '25 de abril');
-cambiarFechas(34, '26 de abril');
-cambiarFechas(10, '26 de abril');
-cambiarFechas(50, '26 de abril');
-cambiarFechas(25, '29 de abril');
-cambiarFechas(13, '29 de abril');
-cambiarFechas(36, '06 de mayo');
-cambiarFechas(16, '06 de mayo');
-cambiarFechas(28, '07 de mayo');
-cambiarFechas(17, '07 de mayo');
-cambiarFechas(48, '08 de mayo');
-cambiarFechas(3, '08 de mayo');
-cambiarFechas(18, '09 de mayo');
-cambiarFechas(31, '09 de mayo');
-cambiarFechas(2, '10 de mayo');
-cambiarFechas(12, '10 de mayo');
-cambiarFechas(54, '10 de mayo');
-cambiarFechas(30, '13 de mayo');
-cambiarFechas(42, '13 de mayo');
-cambiarFechas(36, '14 de mayo');
-cambiarFechas(40, '14 de mayo');
-cambiarFechas(5, '15 de mayo');
-cambiarFechas(44, '15 de mayo');
-cambiarFechas(6, '16 de mayo');
-cambiarFechas(24, '16 de mayo');
-cambiarFechas(29, '17 de mayo');
-cambiarFechas(49, '17 de mayo');
-cambiarFechas(8, '17 de mayo');
-cambiarFechas(51, '20 de mayo');
-cambiarFechas(37, '20 de mayo');
-cambiarFechas(14, '21 de mayo');
-cambiarFechas(19, '21 de mayo');
-cambiarFechas(52, '22 de mayo');
-cambiarFechas(23, '22 de mayo');
-cambiarFechas(6, '23 de mayo');
-cambiarFechas(33, '23 de mayo');
-cambiarFechas(35, '24 de mayo');
-cambiarFechas(26, '24 de mayo');
-cambiarFechas(11, '24 de mayo');
-
-
-// Función para cambiar las fechas
-//function cambiarFechas(index, fecha) {
-    // Aquí iría tu lógica para cambiar la fecha de la partida en el índice especificado
-//}
-
-// Función para cambiar todas las fechas por 'por definir'
-//function cambiarTodasLasFechasPorDefinir() {
-   // for (let i = 0; i < todasLasPartidas.length; i++) {
-//        cambiarFechas(i, 'por definir');
-   // }
-//}
-
-// Llamada para cambiar todas las fechas por 'por definir'
- //cambiarTodasLasFechasPorDefinir();
-
-
-//cambiarFechas(55, 'por definir'); // no hay equipo 55, esta función sirve para quitar fecha a partidas
-
-
-
-
-
+// Función para mostrar las partidas
 function mostrarPartidas() {
     const tbody = document.querySelector('#partidas tbody');
     tbody.innerHTML = '';
 
-    // Crear un array de fechas únicas ordenadas cronológicamente
-    const fechasUnicas = obtenerFechasUnicas();
-    
-    // Asignar posiciones a las fechas en el array de fechas únicas
-    const fechaToPosicion = {};
-    fechasUnicas.forEach((fecha, index) => {
-        fechaToPosicion[fecha] = index;
-    });
+    // No es necesario ordenar las partidas por fecha
 
-    // Ordenar las partidas por fecha y variable auxiliar
-    const partidasOrdenadas = partidas.sort((a, b) => {
-        const esPorDefinirA = a.fecha.includes('por definir');
-        const esPorDefinirB = b.fecha.includes('por definir');
-
-        if (esPorDefinirA && esPorDefinirB) {
-            return 0; // Mantener el orden relativo si ambos contienen "por definir"
-        } else if (esPorDefinirA) {
-            return 1; // Ordenar a con "por definir" después de b sin "por definir"
-        } else if (esPorDefinirB) {
-            return -1; // Ordenar b con "por definir" después de a sin "por definir"
-        } else {
-            const contieneMayoA = a.fecha.includes('mayo');
-            const contieneMayoB = b.fecha.includes('mayo');
-
-            if (contieneMayoA && contieneMayoB) {
-                // Ordenar de menor a mayor por día si ambos contienen "mayo"
-                const diaA = parseInt(a.fecha.split(' ')[0]); // Obtener el día de la fecha A
-                const diaB = parseInt(b.fecha.split(' ')[0]); // Obtener el día de la fecha B
-                return diaA - diaB;
-            } else if (contieneMayoA) {
-                return 1; // Ordenar a con "mayo" después de b sin "mayo"
-            } else if (contieneMayoB) {
-                return -1; // Ordenar b con "mayo" después de a sin "mayo"
-            } else {
-                // Ordenar en orden normal por fecha si ninguno contiene "mayo"
-                return a.fecha.localeCompare(b.fecha);
-            }
-        }
-    });
-
-    partidasOrdenadas.forEach(partida => {
+    partidas.forEach(partida => {
         const tr = document.createElement('tr');
         tr.innerHTML = `<td>${partida.fecha}</td> <!-- Mantener el formato de fecha original -->
                         <td>${partida.jugadores.join(' vs ')}</td>`;
@@ -219,21 +90,10 @@ function mostrarPartidas() {
 }
 
 
-
-
-
-
-// Función para obtener un array de fechas únicas ordenadas cronológicamente
-function obtenerFechasUnicas() {
-    const fechasSet = new Set();
-    partidas.forEach(partida => {
-        fechasSet.add(partida.fecha);
-    });
-    return Array.from(fechasSet).sort();
-}
-
-// Llamar a la función para mostrar las partidas
-mostrarPartidas();
+// Llamar a la función para generar las partidas al cargar la página
+window.onload = function() {
+    generarPartidas(); // Generar las partidas
+};
 
 
 
