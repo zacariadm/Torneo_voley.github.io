@@ -121,9 +121,9 @@ function actualizarPuntos() {
     jugadoresInfo['Blancaneta'].partidasPerdidas = 0;
 
     jugadoresInfo['Tasoct'].partidasGanadas = 1;
-    jugadoresInfo['Tasoct'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Tasoct'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Tasoct'].partidasEmpatadas = 0;
-    jugadoresInfo['Tasoct'].partidasPerdidas = 2;
+    jugadoresInfo['Tasoct'].partidasPerdidas = 3;
 
     jugadoresInfo['Los Pitufos'].partidasGanadas = 0;
     jugadoresInfo['Los Pitufos'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
@@ -131,17 +131,17 @@ function actualizarPuntos() {
     jugadoresInfo['Los Pitufos'].partidasPerdidas = 4;
 
     jugadoresInfo['Movilidad'].partidasGanadas = 0;
-    jugadoresInfo['Movilidad'].partidasJugadas = 1; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Movilidad'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Movilidad'].partidasEmpatadas = 0;
-    jugadoresInfo['Movilidad'].partidasPerdidas = 1;
+    jugadoresInfo['Movilidad'].partidasPerdidas = 2;
 
     jugadoresInfo['Albacete'].partidasGanadas = 2;
     jugadoresInfo['Albacete'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Albacete'].partidasEmpatadas = 0;
     jugadoresInfo['Albacete'].partidasPerdidas = 2;
 
-    jugadoresInfo['Sierracar'].partidasGanadas = 3;
-    jugadoresInfo['Sierracar'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Sierracar'].partidasGanadas = 4;
+    jugadoresInfo['Sierracar'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Sierracar'].partidasEmpatadas = 0;
     jugadoresInfo['Sierracar'].partidasPerdidas = 0;
 
@@ -160,8 +160,8 @@ function actualizarPuntos() {
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
     jugadoresInfo['Saoko'].partidasPerdidas = 4;
     
-    jugadoresInfo['Cachuchos'].partidasGanadas = 3;
-    jugadoresInfo['Cachuchos'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Cachuchos'].partidasGanadas = 4;
+    jugadoresInfo['Cachuchos'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
@@ -243,6 +243,8 @@ agregarResultado('29 de abril', 'Tasoct vs Saoko', 'Tasoct');
 agregarResultado('29 de abril', 'Los pitufos vs Cachuchos', 'Cachuchos');
 agregarResultado('6 de mayo', 'Blancaneta vs Albacete', 'Blancaneta');
 agregarResultado('6 de mayo', 'Tasoct vs Sierracar', 'Sierracar');
+agregarResultado('7 de mayo', 'Movilidad vs Sierracar', 'Sierracar');
+agregarResultado('7 de mayo', 'Tasoct vs Cachuchos', 'Cachuchos');
 // Llamar a la función para generar las partidas al cargar la página
 window.onload = function() {
     generarPartidas(); // Generar las partidas
