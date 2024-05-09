@@ -35,11 +35,11 @@ function generarPartidas() {
     agregarPartida('08 de mayo', 'Real Bestias', 'Súbditos de marwan');
     agregarPartida('08 de mayo', 'Albacete', 'Radiopatio vc');
     agregarPartida('09 de mayo', 'Cachuchos', 'Súbditos de marwan');
-    agregarPartida('09 de mayo', 'Movilidad', 'Saoko');
-    agregarPartida('10 de mayo', 'Blancaneta', 'Movilidad');
+    agregarPartida('09 de mayo', 'Blancaneta', 'Movilidad');
+    agregarPartida('10 de mayo', 'Movilidad', 'Radiopatio vc' );
     agregarPartida('10 de mayo', 'Tasoct', 'Albacete');
     agregarPartida('10 de mayo', 'Tasoct', 'Súbditos de marwan');
-    agregarPartida('13 de mayo', 'Movilidad', 'Radiopatio vc');
+    agregarPartida('13 de mayo', 'Movilidad', 'Saoko');
     agregarPartida('13 de mayo', 'Sierracar', 'Saoko');
     agregarPartida('14 de mayo', 'Albacete', 'Radiopatio vc');
     agregarPartida('14 de mayo', 'Sierracar', 'Real Bestias');
