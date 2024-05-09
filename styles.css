@@ -43,10 +43,11 @@ head {
     display: flex;
     justify-content: space-between; /* Para distribuir los elementos a los lados */
     align-items: center; /* Para alinear verticalmente los elementos */
-    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con opacidad */
+    background-color: rgba(52, 130, 246, 0.721); /* Color de fondo con opacidad */
     padding: 20px; /* Espaciado interno */
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    color: #81c62e;
 }
 
 /* Estilos para el contenedor de la tabla */
@@ -64,6 +65,7 @@ head {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
     border: 1px solid #ccc; /* Borde */
     border-radius: 10px; /* Bordes redondeados */
+    background-color: rgb(165, 61, 144); /* Color de fondo con opacidad */
 }
 
 /* Estilos para el contenedor de la imagen */
@@ -82,9 +84,11 @@ head {
     margin: 20px auto;
     max-width: 800px;
     padding: 0 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con opacidad */
+    background-color: rgba(52, 130, 246, 0.721); /* Color de fondo con opacidad */
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    color: #81c62e;
+    
 }
 
 /* Estilos para el contenedor de la imagen */

@@ -36,7 +36,7 @@ function generarPartidas() {
     agregarPartida('08 de mayo', 'Albacete', 'Radiopatio vc');
     agregarPartida('09 de mayo', 'Cachuchos', 'Súbditos de marwan');
     agregarPartida('09 de mayo', 'Blancaneta', 'Movilidad');
-    agregarPartida('10 de mayo', 'Movilidad', 'Radiopatio vc' );
+    agregarPartida('10 de mayo', 'Los pitufos', 'Movilidad' );
     agregarPartida('10 de mayo', 'Tasoct', 'Albacete');
     agregarPartida('10 de mayo', 'Tasoct', 'Súbditos de marwan');
     agregarPartida('13 de mayo', 'Movilidad', 'Saoko');
@@ -53,9 +53,9 @@ function generarPartidas() {
     agregarPartida('20 de mayo', 'Radiopatio vc', 'Súbditos de marwan');
     agregarPartida('20 de mayo', 'Albacete', 'Saoko');
     agregarPartida('21 de mayo', 'Tasoct', 'Real Bestias');
-    agregarPartida('21 de mayo', 'Los pitufos', 'Movilidad');
+    agregarPartida('21 de mayo', 'Movilidad', 'Radiopatio vc');
     agregarPartida('22 de mayo', 'Saoko', 'Cachuchos');
-    agregarPartida('22 de mayo', 'Los pitufos', 'Radiopatio vc');
+    agregarPartida('22 de mayo', 'Sierracar', 'Radiopatio vc');
     agregarPartida('23 de mayo', 'Blancaneta', 'Radiopatio vc');
     agregarPartida('23 de mayo', 'Movilidad', 'Súbditos de marwan');
     agregarPartida('24 de mayo', 'Albacete', 'Real Bestias');
@@ -116,9 +116,9 @@ function actualizarPuntos() {
     
     // Define el número de partidas jugadas manualmente para cada jugador
     jugadoresInfo['Blancaneta'].partidasGanadas = 4;
-    jugadoresInfo['Blancaneta'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Blancaneta'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Blancaneta'].partidasEmpatadas = 0;
-    jugadoresInfo['Blancaneta'].partidasPerdidas = 0;
+    jugadoresInfo['Blancaneta'].partidasPerdidas = 1;
 
     jugadoresInfo['Tasoct'].partidasGanadas = 1;
     jugadoresInfo['Tasoct'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
@@ -130,8 +130,8 @@ function actualizarPuntos() {
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
     jugadoresInfo['Los Pitufos'].partidasPerdidas = 4;
 
-    jugadoresInfo['Movilidad'].partidasGanadas = 0;
-    jugadoresInfo['Movilidad'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Movilidad'].partidasGanadas = 1;
+    jugadoresInfo['Movilidad'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Movilidad'].partidasEmpatadas = 0;
     jugadoresInfo['Movilidad'].partidasPerdidas = 2;
 
@@ -160,15 +160,15 @@ function actualizarPuntos() {
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
     jugadoresInfo['Saoko'].partidasPerdidas = 4;
     
-    jugadoresInfo['Cachuchos'].partidasGanadas = 4;
-    jugadoresInfo['Cachuchos'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Cachuchos'].partidasGanadas = 5;
+    jugadoresInfo['Cachuchos'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Cachuchos'].partidasEmpatadas = 0;
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
     jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 1;
-    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 0;
-    jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 1;
+    jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 2;
     
     // Calcula los puntos
     for (const jugador in jugadoresInfo) {
@@ -245,6 +245,10 @@ agregarResultado('6 de mayo', 'Blancaneta vs Albacete', 'Blancaneta');
 agregarResultado('6 de mayo', 'Tasoct vs Sierracar', 'Sierracar');
 agregarResultado('7 de mayo', 'Movilidad vs Sierracar', 'Sierracar');
 agregarResultado('7 de mayo', 'Tasoct vs Cachuchos', 'Cachuchos');
+agregarResultado('8 de mayo', 'Real Bestias vs Súbditos de marwan', 'Cancelada');
+agregarResultado('8 de mayo', ' Albacete vs Radiopatio vc', 'Cancelada');
+agregarResultado('9 de mayo', ' Cachuchos vs Súbditos de marwan', 'Cachuchos');
+agregarResultado('9 de mayo', ' Blancaneta vs Movilidad', 'Movilidad');
 // Llamar a la función para generar las partidas al cargar la página
 window.onload = function() {
     generarPartidas(); // Generar las partidas
