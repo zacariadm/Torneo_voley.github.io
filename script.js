@@ -36,41 +36,32 @@ function generarPartidas() {
     agregarPartida('08 de mayo', 'Albacete', 'Radiopatio vc');
     agregarPartida('09 de mayo', 'Cachuchos', 'Súbditos de marwan');
     agregarPartida('09 de mayo', 'Blancaneta', 'Movilidad');
-    agregarPartida('10 de mayo', 'Los pitufos', 'Movilidad' );
+    agregarPartida('10 de mayo', 'Los pitufos', 'Movilidad');
     agregarPartida('10 de mayo', 'Tasoct', 'Albacete');
     agregarPartida('10 de mayo', 'Tasoct', 'Súbditos de marwan');
-
     agregarPartida('13 de mayo', 'Movilidad', 'Saoko');
     agregarPartida('13 de mayo', 'Sierracar', 'Radiopatio vc');
-
     agregarPartida('14 de mayo', 'Albacete', 'Radiopatio vc');
     agregarPartida('14 de mayo', 'Sierracar', 'Real Bestias');
-
     agregarPartida('15 de mayo', 'Blancaneta', 'Real Bestias');
     agregarPartida('15 de mayo', 'Sierracar', 'Súbditos de marwan');
-
     agregarPartida('16 de mayo', 'Blancaneta', 'Radiopatio vc');
     agregarPartida('16 de mayo', 'Los pitufos', 'Saoko');
-
     agregarPartida('17 de mayo', 'Movilidad', 'Real Bestias');
     agregarPartida('17 de mayo', 'Tasoct', 'Los pitufos');
     agregarPartida('17 de mayo', 'Blancaneta', 'Cachuchos');
-
     agregarPartida('20 de mayo', 'Radiopatio vc', 'Súbditos de marwan');
     agregarPartida('20 de mayo', 'Albacete', 'Saoko');
-
-    agregarPartida('21 de mayo', 'Tasoct', 'Real Bestias');
+    agregarPartida('21 de mayo', 'Saoko', 'Cachuchos');
     agregarPartida('21 de mayo', 'Movilidad', 'Radiopatio vc');
-
-    agregarPartida('22 de mayo', 'Saoko', 'Cachuchos');
-    agregarPartida('22 de mayo', 'Sierracar', 'Radiopatio vc');
-
+    agregarPartida('22 de mayo', 'Tasoct', 'Real Bestias');
+    agregarPartida('22 de mayo', 'Sierracar', 'Saoko');
     agregarPartida('23 de mayo', 'Blancaneta', 'Radiopatio vc');
     agregarPartida('23 de mayo', 'Movilidad', 'Súbditos de marwan');
-
     agregarPartida('24 de mayo', 'Albacete', 'Real Bestias');
     agregarPartida('24 de mayo', 'Los pitufos', 'Súbditos de marwan');
     agregarPartida('24 de mayo', 'Tasoct', 'Movilidad');
+    
     
     // Continuar con las demás partidas
 
