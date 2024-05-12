@@ -39,25 +39,35 @@ function generarPartidas() {
     agregarPartida('10 de mayo', 'Los pitufos', 'Movilidad' );
     agregarPartida('10 de mayo', 'Tasoct', 'Albacete');
     agregarPartida('10 de mayo', 'Tasoct', 'Súbditos de marwan');
+
     agregarPartida('13 de mayo', 'Movilidad', 'Saoko');
-    agregarPartida('13 de mayo', 'Sierracar', 'Saoko');
+    agregarPartida('13 de mayo', 'Sierracar', 'Radiopatio vc');
+
     agregarPartida('14 de mayo', 'Albacete', 'Radiopatio vc');
     agregarPartida('14 de mayo', 'Sierracar', 'Real Bestias');
+
     agregarPartida('15 de mayo', 'Blancaneta', 'Real Bestias');
     agregarPartida('15 de mayo', 'Sierracar', 'Súbditos de marwan');
+
     agregarPartida('16 de mayo', 'Blancaneta', 'Radiopatio vc');
     agregarPartida('16 de mayo', 'Los pitufos', 'Saoko');
+
     agregarPartida('17 de mayo', 'Movilidad', 'Real Bestias');
     agregarPartida('17 de mayo', 'Tasoct', 'Los pitufos');
     agregarPartida('17 de mayo', 'Blancaneta', 'Cachuchos');
+
     agregarPartida('20 de mayo', 'Radiopatio vc', 'Súbditos de marwan');
     agregarPartida('20 de mayo', 'Albacete', 'Saoko');
+
     agregarPartida('21 de mayo', 'Tasoct', 'Real Bestias');
     agregarPartida('21 de mayo', 'Movilidad', 'Radiopatio vc');
+
     agregarPartida('22 de mayo', 'Saoko', 'Cachuchos');
     agregarPartida('22 de mayo', 'Sierracar', 'Radiopatio vc');
+
     agregarPartida('23 de mayo', 'Blancaneta', 'Radiopatio vc');
     agregarPartida('23 de mayo', 'Movilidad', 'Súbditos de marwan');
+
     agregarPartida('24 de mayo', 'Albacete', 'Real Bestias');
     agregarPartida('24 de mayo', 'Los pitufos', 'Súbditos de marwan');
     agregarPartida('24 de mayo', 'Tasoct', 'Movilidad');
@@ -121,23 +131,23 @@ function actualizarPuntos() {
     jugadoresInfo['Blancaneta'].partidasPerdidas = 1;
 
     jugadoresInfo['Tasoct'].partidasGanadas = 1;
-    jugadoresInfo['Tasoct'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Tasoct'].partidasEmpatadas = 0;
+    jugadoresInfo['Tasoct'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Tasoct'].partidasEmpatadas = 1;
     jugadoresInfo['Tasoct'].partidasPerdidas = 3;
 
-    jugadoresInfo['Los Pitufos'].partidasGanadas = 0;
-    jugadoresInfo['Los Pitufos'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Los Pitufos'].partidasGanadas = 1;
+    jugadoresInfo['Los Pitufos'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
     jugadoresInfo['Los Pitufos'].partidasPerdidas = 4;
 
     jugadoresInfo['Movilidad'].partidasGanadas = 1;
-    jugadoresInfo['Movilidad'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Movilidad'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Movilidad'].partidasEmpatadas = 0;
-    jugadoresInfo['Movilidad'].partidasPerdidas = 2;
+    jugadoresInfo['Movilidad'].partidasPerdidas = 3;
 
     jugadoresInfo['Albacete'].partidasGanadas = 2;
-    jugadoresInfo['Albacete'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Albacete'].partidasEmpatadas = 0;
+    jugadoresInfo['Albacete'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Albacete'].partidasEmpatadas = 1;
     jugadoresInfo['Albacete'].partidasPerdidas = 2;
 
     jugadoresInfo['Sierracar'].partidasGanadas = 4;
@@ -146,13 +156,13 @@ function actualizarPuntos() {
     jugadoresInfo['Sierracar'].partidasPerdidas = 0;
 
     jugadoresInfo['Real Bestias'].partidasGanadas = 2;
-    jugadoresInfo['Real Bestias'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Real Bestias'].partidasEmpatadas = 0;
+    jugadoresInfo['Real Bestias'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Real Bestias'].partidasEmpatadas = 1;
     jugadoresInfo['Real Bestias'].partidasPerdidas = 0;
 
     jugadoresInfo['Radiopatio VC'].partidasGanadas = 0;
-    jugadoresInfo['Radiopatio VC'].partidasJugadas = 2; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Radiopatio VC'].partidasEmpatadas = 0;
+    jugadoresInfo['Radiopatio VC'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Radiopatio VC'].partidasEmpatadas = 1;
     jugadoresInfo['Radiopatio VC'].partidasPerdidas = 2;
 
     jugadoresInfo['Saoko'].partidasGanadas = 1;
@@ -166,8 +176,8 @@ function actualizarPuntos() {
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
     jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 1;
-    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 3; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 0;
+    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 2;
     jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 2;
     
     // Calcula los puntos
@@ -245,10 +255,18 @@ agregarResultado('6 de mayo', 'Blancaneta vs Albacete', 'Blancaneta');
 agregarResultado('6 de mayo', 'Tasoct vs Sierracar', 'Sierracar');
 agregarResultado('7 de mayo', 'Movilidad vs Sierracar', 'Sierracar');
 agregarResultado('7 de mayo', 'Tasoct vs Cachuchos', 'Cachuchos');
+
 agregarResultado('8 de mayo', 'Real Bestias vs Súbditos de marwan', 'Cancelada');
 agregarResultado('8 de mayo', ' Albacete vs Radiopatio vc', 'Cancelada');
+
 agregarResultado('9 de mayo', ' Cachuchos vs Súbditos de marwan', 'Cachuchos');
 agregarResultado('9 de mayo', ' Blancaneta vs Movilidad', 'Movilidad');
+
+agregarResultado('10 de mayo', ' Los pitufos vs Movilidad', 'Los pitufos');
+agregarResultado('10 de mayo', ' Tasoct vs Albacete', 'Tasoct');
+agregarResultado('10 de mayo', ' Tasoct vs Súbditos de marwan', 'Cancelada');
+
+
 // Llamar a la función para generar las partidas al cargar la página
 window.onload = function() {
     generarPartidas(); // Generar las partidas
