@@ -131,8 +131,8 @@ function actualizarPuntos() {
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
     jugadoresInfo['Los Pitufos'].partidasPerdidas = 4;
 
-    jugadoresInfo['Movilidad'].partidasGanadas = 1;
-    jugadoresInfo['Movilidad'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Movilidad'].partidasGanadas = 2;
+    jugadoresInfo['Movilidad'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Movilidad'].partidasEmpatadas = 0;
     jugadoresInfo['Movilidad'].partidasPerdidas = 3;
 
@@ -157,9 +157,9 @@ function actualizarPuntos() {
     jugadoresInfo['Radiopatio VC'].partidasPerdidas = 2;
 
     jugadoresInfo['Saoko'].partidasGanadas = 1;
-    jugadoresInfo['Saoko'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Saoko'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
-    jugadoresInfo['Saoko'].partidasPerdidas = 4;
+    jugadoresInfo['Saoko'].partidasPerdidas = 5;
     
     jugadoresInfo['Cachuchos'].partidasGanadas = 5;
     jugadoresInfo['Cachuchos'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
@@ -257,6 +257,8 @@ agregarResultado('10 de mayo', ' Los pitufos vs Movilidad', 'Los pitufos');
 agregarResultado('10 de mayo', ' Tasoct vs Albacete', 'Tasoct');
 agregarResultado('10 de mayo', ' Tasoct vs Súbditos de marwan', 'Cancelada');
 
+agregarResultado('13 de mayo', ' Movilidad vs Saoko ', 'Movilidad');
+agregarResultado('13 de mayo', ' Albacete vs Radiopatio vc', 'Albacete');
 
 // Llamar a la función para generar las partidas al cargar la página
 window.onload = function() {
