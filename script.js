@@ -117,8 +117,8 @@ function actualizarPuntos() {
     
     // Define el número de partidas jugadas manualmente para cada jugador
     jugadoresInfo['Blancaneta'].partidasGanadas = 4;
-    jugadoresInfo['Blancaneta'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Blancaneta'].partidasEmpatadas = 0;
+    jugadoresInfo['Blancaneta'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Blancaneta'].partidasEmpatadas = 1;
     jugadoresInfo['Blancaneta'].partidasPerdidas = 1;
 
     jugadoresInfo['Tasoct'].partidasGanadas = 1;
@@ -142,13 +142,13 @@ function actualizarPuntos() {
     jugadoresInfo['Albacete'].partidasPerdidas = 2;
 
     jugadoresInfo['Sierracar'].partidasGanadas = 5;
-    jugadoresInfo['Sierracar'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Sierracar'].partidasEmpatadas = 0;
+    jugadoresInfo['Sierracar'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Sierracar'].partidasEmpatadas = 1;
     jugadoresInfo['Sierracar'].partidasPerdidas = 0;
 
     jugadoresInfo['Real Bestias'].partidasGanadas = 3;
-    jugadoresInfo['Real Bestias'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Real Bestias'].partidasEmpatadas = 1;
+    jugadoresInfo['Real Bestias'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Real Bestias'].partidasEmpatadas = 2;
     jugadoresInfo['Real Bestias'].partidasPerdidas = 0;
 
     jugadoresInfo['Radiopatio VC'].partidasGanadas = 0;
@@ -167,8 +167,8 @@ function actualizarPuntos() {
     jugadoresInfo['Cachuchos'].partidasPerdidas = 1;
     
     jugadoresInfo['Súbditos de Marwan'].partidasGanadas = 1;
-    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
-    jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 2;
+    jugadoresInfo['Súbditos de Marwan'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Súbditos de Marwan'].partidasEmpatadas = 3;
     jugadoresInfo['Súbditos de Marwan'].partidasPerdidas = 2;
     
     // Calcula los puntos
@@ -263,6 +263,15 @@ agregarResultado('13 de mayo', ' Albacete vs Radiopatio vc', 'Albacete');
 agregarResultado('14 de mayo', ' Sierracar vs Radiopatio vc', 'Sierracar');
 agregarResultado('14 de mayo', ' Movilidad vs Real Bestias', 'Real Bestias');
 
+agregarResultado('15 de mayo', ' Blancaneta vs Real Bestias', 'Cancelada');
+agregarResultado('15 de mayo', ' Sierracar vs Súbditos de marwan', 'Cancelada');
+
+agregarResultado('16 de mayo', ' Blancaneta vs Radiopatio vc', 'Por definir');
+agregarResultado('16 de mayo', ' Los pitufos vs Saoko', 'Por definir');
+
+agregarResultado('17 de mayo', ' Sierracar vs Real Bestias', 'Por definir');
+agregarResultado('17 de mayo', ' Tasoct vs Los pitufos', 'Por definir');
+agregarResultado('17 de mayo', ' Blancaneta vs Cachuchos', 'Por definir');
 // Llamar a la función para generar las partidas al cargar la página
 window.onload = function() {
     generarPartidas(); // Generar las partidas
