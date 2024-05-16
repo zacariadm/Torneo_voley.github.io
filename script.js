@@ -117,17 +117,17 @@ function actualizarPuntos() {
     
     // Define el número de partidas jugadas manualmente para cada jugador
     jugadoresInfo['Blancaneta'].partidasGanadas = 4;
-    jugadoresInfo['Blancaneta'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Blancaneta'].partidasJugadas = 7; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Blancaneta'].partidasEmpatadas = 1;
-    jugadoresInfo['Blancaneta'].partidasPerdidas = 1;
+    jugadoresInfo['Blancaneta'].partidasPerdidas = 2;
 
     jugadoresInfo['Tasoct'].partidasGanadas = 1;
     jugadoresInfo['Tasoct'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Tasoct'].partidasEmpatadas = 1;
     jugadoresInfo['Tasoct'].partidasPerdidas = 3;
 
-    jugadoresInfo['Los Pitufos'].partidasGanadas = 1;
-    jugadoresInfo['Los Pitufos'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Los Pitufos'].partidasGanadas = 2;
+    jugadoresInfo['Los Pitufos'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Los Pitufos'].partidasEmpatadas = 0;
     jugadoresInfo['Los Pitufos'].partidasPerdidas = 4;
 
@@ -151,15 +151,15 @@ function actualizarPuntos() {
     jugadoresInfo['Real Bestias'].partidasEmpatadas = 2;
     jugadoresInfo['Real Bestias'].partidasPerdidas = 0;
 
-    jugadoresInfo['Radiopatio VC'].partidasGanadas = 0;
-    jugadoresInfo['Radiopatio VC'].partidasJugadas = 4; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Radiopatio VC'].partidasGanadas = 1;
+    jugadoresInfo['Radiopatio VC'].partidasJugadas = 5; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Radiopatio VC'].partidasEmpatadas = 1;
     jugadoresInfo['Radiopatio VC'].partidasPerdidas = 3;
 
     jugadoresInfo['Saoko'].partidasGanadas = 1;
-    jugadoresInfo['Saoko'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
+    jugadoresInfo['Saoko'].partidasJugadas = 7; // Añade el número de partidas jugadas manualmente
     jugadoresInfo['Saoko'].partidasEmpatadas = 0;
-    jugadoresInfo['Saoko'].partidasPerdidas = 5;
+    jugadoresInfo['Saoko'].partidasPerdidas = 6;
     
     jugadoresInfo['Cachuchos'].partidasGanadas = 5;
     jugadoresInfo['Cachuchos'].partidasJugadas = 6; // Añade el número de partidas jugadas manualmente
@@ -266,8 +266,8 @@ agregarResultado('14 de mayo', ' Movilidad vs Real Bestias', 'Real Bestias');
 agregarResultado('15 de mayo', ' Blancaneta vs Real Bestias', 'Cancelada');
 agregarResultado('15 de mayo', ' Sierracar vs Súbditos de marwan', 'Cancelada');
 
-agregarResultado('16 de mayo', ' Blancaneta vs Radiopatio vc', 'Por definir');
-agregarResultado('16 de mayo', ' Los pitufos vs Saoko', 'Por definir');
+agregarResultado('16 de mayo', ' Blancaneta vs Radiopatio vc', 'Radiopatio vc');
+agregarResultado('16 de mayo', ' Los pitufos vs Saoko', 'Los pitufos');
 
 agregarResultado('17 de mayo', ' Sierracar vs Real Bestias', 'Por definir');
 agregarResultado('17 de mayo', ' Tasoct vs Los pitufos', 'Por definir');
